@@ -23,6 +23,29 @@ window.DASHBOARD_DATA = {
     top40Cutoff: 72.00,
     overallIndexAverage: 74.27
   },
+  sustainabilityProgress: {
+    environmental: [
+      "Washington, DC has achieved 58% of its 2030 GHG emissions reduction goal",
+      "Cyclists enjoy 255 miles of dedicated bike lanes in the city",
+      "28% of all municipal waste is recycled annually",
+      "45% of the city's electricity is supplied by renewables"
+    ],
+    social: [
+      "The city's public transport network is accessible to individuals with physical disabilities",
+      "Many public spaces are modified to accommodate individuals with physical and non-physical disabilities",
+      "Visitor management is informed by a committee of diverse stakeholders"
+    ],
+    supplier: [
+      "30% of hotel rooms carry a 3rd-party sustainability certification",
+      "DDC offers resources for and incentivizes members to engage in a circular economy",
+      "The Walter E. Washington Convention Center is certified LEED O+M Platinum"
+    ],
+    destinationManagement: [
+      "Monitors organizational sustainability practices via an internal sustainability committee",
+      "Provides sustainability and DEI training sessions to local tourism and meetings suppliers",
+      "Facilitates legacy projects for meetings and conventions"
+    ]
+  },
   growthTargetsTitle: "Growth Targets",
   growthTargets: [
     { label: "GDS-Index score", current: 59.76, target: 90 },

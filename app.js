@@ -66,6 +66,19 @@
     $("gdsChange").textContent = `${change >= 0 ? "+" : ""}${change.toFixed(2)}%`;
     $("gdsRegionalRank").textContent = `${D.regionalRanking?.rank || "-"}th`;
     $("gdsCutoff").textContent = `${D.regionalRanking?.top40Cutoff ?? "-"}%`;
+    const progressLists = {
+      environmentalMetrics: D.sustainabilityProgress?.environmental,
+      socialMetrics: D.sustainabilityProgress?.social,
+      supplierMetrics: D.sustainabilityProgress?.supplier,
+      destinationMetrics: D.sustainabilityProgress?.destinationManagement
+    };
+    Object.entries(progressLists).forEach(([id, metrics]) => {
+      $(id).replaceChildren(...(metrics || []).map((metric) => {
+        const item = document.createElement("li");
+        item.textContent = metric;
+        return item;
+      }));
+    });
     if (!window.Chart) return;
     const css = getComputedStyle(root);
     const accent = css.getPropertyValue("--accent").trim();

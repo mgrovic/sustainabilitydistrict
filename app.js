@@ -143,9 +143,20 @@
     history.pushState(null, "", "#gds");
     showView("gds");
   }
+  function openView(event, view) {
+    event.preventDefault();
+    history.pushState(null, "", `#${view}`);
+    showView(view);
+  }
   $("gdsPanel").addEventListener("click", openGdsView);
   $("gdsPanel").addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") openGdsView(event);
+  });
+  [["gdsStat", "gds"], ["membersStat", "members"], ["fellowsStat", "fellows"]].forEach(([id, view]) => {
+    $(id).addEventListener("click", (event) => openView(event, view));
+    $(id).addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") openView(event, view);
+    });
   });
   $("homeLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
   $("dashboardLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });

@@ -18,6 +18,8 @@
   const fellowSearch = $("fellowSearch");
   const fellowStatus = $("fellowStatus");
   const gdsView = $("gdsView");
+  let chart;
+  let detailChart;
 
   const root = document.documentElement;
   $("themeToggle").addEventListener("click", () => {
@@ -169,8 +171,6 @@
   window.addEventListener("popstate", () => showView(window.location.hash === "#members" ? "members" : window.location.hash === "#fellows" ? "fellows" : window.location.hash === "#gds" ? "gds" : "dashboard"));
   showView(window.location.hash === "#members" ? "members" : window.location.hash === "#fellows" ? "fellows" : window.location.hash === "#gds" ? "gds" : "dashboard");
 
-  let chart;
-  let detailChart;
   function drawChart() {
     if (!window.Chart) return;
     const css = getComputedStyle(root);

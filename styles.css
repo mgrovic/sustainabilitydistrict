@@ -75,6 +75,8 @@ h2 { font-size: 1.35rem; margin: 0 0 1rem; font-weight: 600; }
 
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
 .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; }
+.panel-link { cursor: pointer; }
+.panel-link:hover { border-color: var(--accent); }
 .panel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .view-all { color: var(--accent); text-decoration: none; font-weight: 600; white-space: nowrap; }
 .view-all:hover { text-decoration: underline; }

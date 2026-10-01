@@ -51,6 +51,18 @@
 
   $("districtLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#members"); showView("members"); });
   $("membersLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#members"); showView("members"); });
+  function openMembersFromPanel(event) {
+    if (event.target.closest("a, button, input, select")) return;
+    history.pushState(null, "", "#members");
+    showView("members");
+  }
+  $("membersPanel").addEventListener("click", openMembersFromPanel);
+  $("membersPanel").addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openMembersFromPanel(event);
+    }
+  });
   $("homeLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
   $("dashboardLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
   memberSearch.addEventListener("input", renderMembers);

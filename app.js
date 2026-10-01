@@ -14,6 +14,9 @@
   const memberGrid = $("memberGrid");
   const memberSearch = $("memberSearch");
   const memberCategory = $("memberCategory");
+  const fellowGrid = $("fellowGrid");
+  const fellowSearch = $("fellowSearch");
+  const fellowStatus = $("fellowStatus");
 
   const root = document.documentElement;
   $("themeToggle").addEventListener("click", () => {
@@ -41,16 +44,36 @@
     memberGrid.innerHTML = filtered.length ? filtered.map((member) => `<article class="member-card"><h2>${esc(member.name)}</h2><p>${esc(member.category)}</p>${member.website ? `<a href="${esc(member.website)}" target="_blank" rel="noopener">Visit website ↗</a>` : ""}</article>`).join("") : `<p class="empty">No members match your search.</p>`;
   }
 
+  function renderFellows() {
+    const query = fellowSearch.value.trim().toLowerCase();
+    const status = fellowStatus.value;
+    const filtered = fellows.filter((fellow) => {
+      const matchesQuery = !query || `${fellow.name} ${fellow.business} ${fellow.cohort}`.toLowerCase().includes(query);
+      const matchesStatus = status === "all" || fellow.status === status;
+      return matchesQuery && matchesStatus;
+    });
+    fellowGrid.innerHTML = filtered.length ? filtered.map((fellow) => `<article class="member-card"><h2>${esc(fellow.name)}</h2><p>${esc(fellow.business)} · Cohort ${esc(fellow.cohort)}</p>${fellow.website ? `<a href="${esc(fellow.website)}" target="_blank" rel="noopener">Visit website ↗</a>` : ""}</article>`).join("") : `<p class="empty">No fellows match your search.</p>`;
+  }
+
   function showView(view) {
     const showingMembers = view === "members";
-    dashboardView.hidden = showingMembers;
+    const showingFellows = view === "fellows";
+    dashboardView.hidden = showingMembers || showingFellows;
     membersView.hidden = !showingMembers;
-    document.title = showingMembers ? "Sustainability District Members" : "DDC Sustainability District Dashboard";
+    $("fellowsView").hidden = !showingFellows;
+    document.title = showingMembers ? "Sustainability District Members" : showingFellows ? "DEI Business Fellows" : "DDC Sustainability District Dashboard";
     if (showingMembers) renderMembers();
+    if (showingFellows) renderFellows();
   }
 
   $("districtLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#members"); showView("members"); });
   $("membersLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#members"); showView("members"); });
+  function openFellowsView(event) {
+    event.preventDefault();
+    history.pushState(null, "", "#fellows");
+    showView("fellows");
+  }
+  $("fellowsLink").addEventListener("click", openFellowsView);
   function openMembersFromPanel(event) {
     if (event.target.closest("a, button, input, select")) return;
     history.pushState(null, "", "#members");
@@ -63,12 +86,26 @@
       openMembersFromPanel(event);
     }
   });
+  function openFellowsFromPanel(event) {
+    if (event.target.closest("a, button, input, select")) return;
+    openFellowsView(event);
+  }
+  $("fellowsPanel").addEventListener("click", openFellowsFromPanel);
+  $("fellowsPanel").addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openFellowsFromPanel(event);
+    }
+  });
   $("homeLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
   $("dashboardLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
+  $("fellowsDashboardLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
   memberSearch.addEventListener("input", renderMembers);
   memberCategory.addEventListener("change", renderMembers);
-  window.addEventListener("popstate", () => showView(window.location.hash === "#members" ? "members" : "dashboard"));
-  showView(window.location.hash === "#members" ? "members" : "dashboard");
+  fellowSearch.addEventListener("input", renderFellows);
+  fellowStatus.addEventListener("change", renderFellows);
+  window.addEventListener("popstate", () => showView(window.location.hash === "#members" ? "members" : window.location.hash === "#fellows" ? "fellows" : "dashboard"));
+  showView(window.location.hash === "#members" ? "members" : window.location.hash === "#fellows" ? "fellows" : "dashboard");
 
   let chart;
   function drawChart() {

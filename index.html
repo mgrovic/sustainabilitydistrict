@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DDC Sustainability District Dashboard</title>
+  <meta name="description" content="All of DDC's sustainability efforts, centralized." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar"><div class="brand">DDC Dashboard</div><button id="themeToggle" class="icon-btn" aria-label="Switch light/dark mode">☀︎</button></header>
+  <main class="wrap">
+    <h1>DC's Sustainability Efforts at a Glance</h1>
+    <details class="about"><summary>About the Sustainability Dashboard</summary><p id="aboutText"></p></details>
+    <section class="stats" aria-label="Key numbers">
+      <div class="stat stat-primary"><span class="stat-label">GDS-Index Score</span><span class="stat-value" id="statGds">–</span></div>
+      <div class="stat"><span class="stat-label">Sustainability District Members</span><span class="stat-value" id="statMembers">–</span></div>
+      <div class="stat"><span class="stat-label">Net Zero Carbon Events</span><span class="stat-value"><span id="statCarbon">–</span> <small>kgCO₂e</small></span></div>
+      <div class="stat"><span class="stat-label">DEI Business Fellows</span><span class="stat-value" id="statFellows">–</span></div>
+    </section>
+    <section class="grid-2">
+      <div class="panel"><h2>GDS-Index Overall Score</h2><div class="chart-box"><canvas id="gdsChart"></canvas></div></div>
+      <div class="panel"><h2 id="targetsTitle">Growth Targets</h2><div id="targets" class="targets"></div></div>
+    </section>
+    <section class="grid-2">
+      <div class="panel"><div class="panel-head"><h2>Sustainability District Members</h2><a id="membersLink" class="view-all" target="_blank" rel="noopener">View all ↗</a></div><div class="filters" id="memberFilters"></div><div class="carousel"><button class="nav" data-dir="-1" data-target="members" aria-label="Previous member">‹</button><div class="slide" id="memberSlide"></div><button class="nav" data-dir="1" data-target="members" aria-label="Next member">›</button></div></div>
+      <div class="panel"><div class="panel-head"><h2>DEI Business Fellows</h2><a id="fellowsLink" class="view-all" target="_blank" rel="noopener">View all ↗</a></div><div class="filters" id="fellowFilters"></div><div class="carousel"><button class="nav" data-dir="-1" data-target="fellows" aria-label="Previous fellow">‹</button><div class="slide" id="fellowSlide"></div><button class="nav" data-dir="1" data-target="fellows" aria-label="Next fellow">›</button></div></div>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -89,7 +89,7 @@
     detailChart = new Chart($("gdsDetailChart"), {
       type: "line",
       data: { labels: gds.map((point) => point.year), datasets: [{ label: "GDS-Index score", data: gds.map((point) => point.score), borderColor: accent, backgroundColor: accent, tension: 0.3, pointRadius: 4 }] },
-      options: { maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { min: 0, max: 100, ticks: { color: muted }, grid: { color: border } }, x: { ticks: { color: muted }, grid: { display: false } } } }
+      options: { maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { min: 20, max: 70, ticks: { color: muted }, grid: { color: border } }, x: { ticks: { color: muted }, grid: { display: false } } } }
     });
   }
 
@@ -181,7 +181,7 @@
     chart = new Chart($("gdsChart"), {
       type: "line",
       data: { labels: gds.map((g) => g.year), datasets: [{ label: "GDS-Index score", data: gds.map((g) => g.score), borderColor: accent, backgroundColor: accent, tension: 0.3, pointRadius: 4 }] },
-      options: { maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { min: 0, max: 100, ticks: { color: muted }, grid: { color: border } }, x: { ticks: { color: muted }, grid: { display: false } } } }
+      options: { maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { min: 20, max: 70, ticks: { color: muted }, grid: { color: border } }, x: { ticks: { color: muted }, grid: { display: false } } } }
     });
   }
   drawChart();

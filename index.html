@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar"><div class="brand">DDC Dashboard</div><button id="themeToggle" class="icon-btn" aria-label="Switch light/dark mode">☀︎</button></header>
+  <header class="topbar"><a class="brand" id="homeLink" href="#dashboard">DDC Dashboard</a><nav class="topnav" aria-label="Primary navigation"><a href="#members" id="districtLink">Sustainability District</a><button id="themeToggle" class="icon-btn" aria-label="Switch light/dark mode">☀︎</button></nav></header>
   <main class="wrap">
+    <div id="dashboardView">
     <h1>DC's Sustainability Efforts at a Glance</h1>
     <details class="about"><summary>About the Sustainability Dashboard</summary><p id="aboutText"></p></details>
     <section class="stats" aria-label="Key numbers">
@@ -28,6 +29,15 @@
     <section class="grid-2">
       <div class="panel"><div class="panel-head"><h2>Sustainability District Members</h2><a id="membersLink" class="view-all" target="_blank" rel="noopener">View all ↗</a></div><div class="filters" id="memberFilters"></div><div class="carousel"><button class="nav" data-dir="-1" data-target="members" aria-label="Previous member">‹</button><div class="slide" id="memberSlide"></div><button class="nav" data-dir="1" data-target="members" aria-label="Next member">›</button></div></div>
       <div class="panel"><div class="panel-head"><h2>DEI Business Fellows</h2><a id="fellowsLink" class="view-all" target="_blank" rel="noopener">View all ↗</a></div><div class="filters" id="fellowFilters"></div><div class="carousel"><button class="nav" data-dir="-1" data-target="fellows" aria-label="Previous fellow">‹</button><div class="slide" id="fellowSlide"></div><button class="nav" data-dir="1" data-target="fellows" aria-label="Next fellow">›</button></div></div>
+    </section>
+    </div>
+    <section id="membersView" class="members-view" hidden>
+      <a class="back-link" id="dashboardLink" href="#dashboard">← Dashboard</a>
+      <h1>Sustainability District Members</h1>
+      <p class="lead">View all members participating in our sustainability district initiatives.</p>
+      <details class="about" open><summary>About the Sustainability District</summary><p>The Sustainability District is a collective of forward-thinking businesses and organizations in Washington, DC, united by a commitment to environmental responsibility and sustainable practices.</p><ul><li>Reduce their carbon footprint</li><li>Implement eco-friendly operations</li><li>Support community-driven environmental initiatives</li></ul></details>
+      <div class="member-controls"><label class="search-field"><span class="sr-only">Search members</span><input id="memberSearch" type="search" placeholder="Search..." /></label><label class="select-field"><span class="sr-only">Filter by category</span><select id="memberCategory"><option value="all">All Categories</option></select></label></div>
+      <div id="memberGrid" class="member-grid"></div>
     </section>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>

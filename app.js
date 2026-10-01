@@ -9,6 +9,11 @@
   const fellows = D.fellows || [];
   const events = D.events || [];
   const gds = D.gdsIndex || [];
+  const dashboardView = $("dashboardView");
+  const membersView = $("membersView");
+  const memberGrid = $("memberGrid");
+  const memberSearch = $("memberSearch");
+  const memberCategory = $("memberCategory");
 
   const root = document.documentElement;
   $("themeToggle").addEventListener("click", () => {
@@ -21,6 +26,36 @@
   $("statMembers").textContent = fmt(members.length);
   $("statCarbon").textContent = fmt(events.reduce((sum, e) => sum + Number(e.kgCO2e || 0), 0));
   $("statFellows").textContent = fmt(fellows.length);
+
+  const categories = [...new Set(members.map((member) => member.category).filter(Boolean))].sort();
+  memberCategory.insertAdjacentHTML("beforeend", categories.map((category) => `<option value="${esc(category)}">${esc(category)}</option>`).join(""));
+
+  function renderMembers() {
+    const query = memberSearch.value.trim().toLowerCase();
+    const category = memberCategory.value;
+    const filtered = members.filter((member) => {
+      const matchesQuery = !query || `${member.name} ${member.category}`.toLowerCase().includes(query);
+      const matchesCategory = category === "all" || member.category === category;
+      return matchesQuery && matchesCategory;
+    });
+    memberGrid.innerHTML = filtered.length ? filtered.map((member) => `<article class="member-card"><h2>${esc(member.name)}</h2><p>${esc(member.category)}</p>${member.website ? `<a href="${esc(member.website)}" target="_blank" rel="noopener">Visit website ↗</a>` : ""}</article>`).join("") : `<p class="empty">No members match your search.</p>`;
+  }
+
+  function showView(view) {
+    const showingMembers = view === "members";
+    dashboardView.hidden = showingMembers;
+    membersView.hidden = !showingMembers;
+    document.title = showingMembers ? "Sustainability District Members" : "DDC Sustainability District Dashboard";
+    if (showingMembers) renderMembers();
+  }
+
+  $("districtLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#members"); showView("members"); });
+  $("homeLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
+  $("dashboardLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
+  memberSearch.addEventListener("input", renderMembers);
+  memberCategory.addEventListener("change", renderMembers);
+  window.addEventListener("popstate", () => showView(window.location.hash === "#members" ? "members" : "dashboard"));
+  showView(window.location.hash === "#members" ? "members" : "dashboard");
 
   let chart;
   function drawChart() {

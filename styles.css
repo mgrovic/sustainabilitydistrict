@@ -74,6 +74,19 @@ h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 1.5rem; line-height: 1.1
 .gds-stats span { color: var(--muted); }
 .gds-stats strong { display: block; font-size: 2rem; margin-top: .4rem; }
 .gds-trend { margin-bottom: 1.5rem; }
+.progress-view { margin-top: 2.5rem; }
+.progress-view > h2 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+.progress-list { display: grid; gap: 1rem; }
+.progress-item { background: var(--panel); border-radius: 10px; padding: 1.5rem 2rem; }
+.progress-item summary { cursor: pointer; font-size: 1.2rem; font-weight: 600; list-style: none; }
+.progress-item summary::-webkit-details-marker { display: none; }
+.progress-item summary::after { content: "+"; float: right; color: var(--muted); font-size: 1.5rem; font-weight: 400; line-height: 1; }
+.progress-item[open] summary::after { content: "−"; }
+.progress-item p { color: var(--muted); margin: 1rem 0 0; max-width: 70ch; }
+.progress-item.environmental { border-left: 4px solid #4ade80; }
+.progress-item.social { border-left: 4px solid #60a5fa; }
+.progress-item.supplier { border-left: 4px solid #fbbf24; }
+.progress-item.destination { border-left: 4px solid #c084fc; }
 .member-controls { display: grid; grid-template-columns: 1fr 270px; gap: 1rem; margin-bottom: 1.5rem; }
 .search-field input, .select-field select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font: inherit; padding: .85rem 1rem; }
 .member-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
@@ -87,6 +100,9 @@ h2 { font-size: 1.35rem; margin: 0 0 1rem; font-weight: 600; }
 .about { border-bottom: 1px solid var(--border); padding: 1rem 0; margin-bottom: 2rem; }
 .about summary { cursor: pointer; font-size: 1.2rem; font-weight: 500; }
 .about p { color: var(--muted); max-width: 70ch; }
+.about p span { display: block; margin-bottom: 1rem; }
+.about p span:last-child { margin-bottom: 0; }
+.about p a { color: var(--accent); }
 
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-bottom: 1.5rem; }
 .stat {

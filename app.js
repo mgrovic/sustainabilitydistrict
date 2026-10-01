@@ -25,7 +25,8 @@
     drawChart();
   });
 
-  $("aboutText").textContent = D.about || "";
+  const aboutParagraphs = D.about?.paragraphs || [];
+  $("aboutText").innerHTML = aboutParagraphs.map((paragraph) => `<span>${esc(paragraph)}</span>`).join("") + (D.about?.contactEmail ? `<span>Want to learn more? Contact us at <a href="mailto:${esc(D.about.contactEmail)}">${esc(D.about.contactEmail)}</a>.</span>` : "");
   $("statGds").textContent = gds.length ? gds[gds.length - 1].score : 0;
   $("statMembers").textContent = fmt(members.length);
   $("statCarbon").textContent = fmt(events.reduce((sum, e) => sum + Number(e.kgCO2e || 0), 0));

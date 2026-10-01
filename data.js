@@ -1,5 +1,12 @@
 window.DASHBOARD_DATA = {
-  about: "The DDC Sustainability District Dashboard brings the district's environmental, social, and economic progress into one view. Figures are updated quarterly by the sustainability team.",
+  about: {
+    paragraphs: [
+      "Welcome to your one-stop resource for sustainability at DDC. This dashboard brings transparency and clarity to our ongoing commitment toward a more sustainable and inclusive future.",
+      "Here, you'll find our current GDS-Index Score, tracking our progress against global sustainability standards; our journey toward achieving Net Zero Carbon, balancing our emissions and environmental impact; highlights from our innovative DEI Business Fellows program, underscoring our dedication to diversity, equity, and inclusion; and a comprehensive directory of Sustainability Members, celebrating local organizations committed to sustainable practices.",
+      "We created this dashboard to make our sustainability efforts accessible and actionable—empowering everyone to understand our impact, celebrate achievements, and explore new opportunities for positive change. Sustainability isn't just a goal; it's a shared responsibility for a brighter future."
+    ],
+    contactEmail: "shelby@washington.org"
+  },
   membersLink: "https://washington.org/sustainability-district/members",
   fellowsLink: "https://washington.org/dei-business-fellows",
   gdsIndex: [

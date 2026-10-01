@@ -53,6 +53,27 @@ h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 1.5rem; line-height: 1.1
 .fellows-view .about summary { color: #ead7f4; }
 .fellows-view .about p, .fellows-view .about li { color: #ded5e2; }
 .fellows-view .about a { color: #c084fc; }
+.gds-intro { background: var(--panel); border-radius: 10px; padding: 2rem; margin-bottom: 2rem; }
+.gds-intro h2 { display: flex; align-items: center; gap: .75rem; }
+.gds-icon { color: var(--accent); font-size: 1.5rem; }
+.gds-intro > p { color: var(--muted); }
+.gds-categories { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.gds-category { border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+.gds-category h3 { margin: 0 0 .35rem; font-size: 1rem; }
+.gds-category p { color: var(--muted); font-size: .9rem; margin: 0; }
+.gds-category.environmental { border-color: #1f6b3b; background: #101e15; }
+.gds-category.environmental h3 { color: #4ade80; }
+.gds-category.social { border-color: #324b99; background: #111728; }
+.gds-category.social h3 { color: #60a5fa; }
+.gds-category.supplier { border-color: #8b4d26; background: #24170f; }
+.gds-category.supplier h3 { color: #fbbf24; }
+.gds-category.destination { border-color: #6f2b82; background: #201024; }
+.gds-category.destination h3 { color: #c084fc; }
+.gds-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+.gds-stats article { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+.gds-stats span { color: var(--muted); }
+.gds-stats strong { display: block; font-size: 2rem; margin-top: .4rem; }
+.gds-trend { margin-bottom: 1.5rem; }
 .member-controls { display: grid; grid-template-columns: 1fr 270px; gap: 1rem; margin-bottom: 1.5rem; }
 .search-field input, .select-field select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font: inherit; padding: .85rem 1rem; }
 .member-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
@@ -120,6 +141,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
   .stats { grid-template-columns: repeat(2, 1fr); }
   .grid-2 { grid-template-columns: 1fr; }
   .member-grid { grid-template-columns: repeat(2, 1fr); }
+  .gds-categories, .gds-stats { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 500px) {
   .stats { grid-template-columns: 1fr; }
@@ -128,4 +150,5 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
   .topnav { gap: .75rem; }
   .topnav a { font-size: .9rem; }
   .member-controls, .member-grid { grid-template-columns: 1fr; }
+  .gds-categories, .gds-stats { grid-template-columns: 1fr; }
 }

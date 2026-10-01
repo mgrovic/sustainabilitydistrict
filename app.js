@@ -17,6 +17,7 @@
   const fellowGrid = $("fellowGrid");
   const fellowSearch = $("fellowSearch");
   const fellowStatus = $("fellowStatus");
+  const gdsView = $("gdsView");
 
   const root = document.documentElement;
   $("themeToggle").addEventListener("click", () => {
@@ -55,15 +56,41 @@
     fellowGrid.innerHTML = filtered.length ? filtered.map((fellow) => `<article class="member-card"><h2>${esc(fellow.name)}</h2><p>${esc(fellow.business)} · Cohort ${esc(fellow.cohort)}</p>${fellow.website ? `<a href="${esc(fellow.website)}" target="_blank" rel="noopener">Visit website ↗</a>` : ""}</article>`).join("") : `<p class="empty">No fellows match your search.</p>`;
   }
 
+  function renderGdsView() {
+    const first = gds[0];
+    const current = gds[gds.length - 1];
+    const change = current && first ? current.score - first.score : 0;
+    $("gdsCurrentYear").textContent = current?.year || "";
+    $("gdsCurrentScore").textContent = `${current?.score ?? 0}%`;
+    $("gdsStartYear").textContent = first?.year || "";
+    $("gdsChange").textContent = `${change >= 0 ? "+" : ""}${change.toFixed(2)}%`;
+    $("gdsRegionalRank").textContent = `${D.regionalRanking?.rank || "-"}th`;
+    $("gdsCutoff").textContent = `${D.regionalRanking?.top40Cutoff ?? "-"}%`;
+    if (!window.Chart) return;
+    const css = getComputedStyle(root);
+    const accent = css.getPropertyValue("--accent").trim();
+    const muted = css.getPropertyValue("--muted").trim();
+    const border = css.getPropertyValue("--border").trim();
+    if (detailChart) detailChart.destroy();
+    detailChart = new Chart($("gdsDetailChart"), {
+      type: "line",
+      data: { labels: gds.map((point) => point.year), datasets: [{ label: "GDS-Index score", data: gds.map((point) => point.score), borderColor: accent, backgroundColor: accent, tension: 0.3, pointRadius: 4 }] },
+      options: { maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { min: 0, max: 100, ticks: { color: muted }, grid: { color: border } }, x: { ticks: { color: muted }, grid: { display: false } } } }
+    });
+  }
+
   function showView(view) {
     const showingMembers = view === "members";
     const showingFellows = view === "fellows";
-    dashboardView.hidden = showingMembers || showingFellows;
+    const showingGds = view === "gds";
+    dashboardView.hidden = showingMembers || showingFellows || showingGds;
     membersView.hidden = !showingMembers;
     $("fellowsView").hidden = !showingFellows;
-    document.title = showingMembers ? "Sustainability District Members" : showingFellows ? "DEI Business Fellows" : "DDC Sustainability District Dashboard";
+    gdsView.hidden = !showingGds;
+    document.title = showingMembers ? "Sustainability District Members" : showingFellows ? "DEI Business Fellows" : showingGds ? "Global Destination Sustainability Index" : "DDC Sustainability District Dashboard";
     if (showingMembers) renderMembers();
     if (showingFellows) renderFellows();
+    if (showingGds) renderGdsView();
   }
 
   $("districtLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#members"); showView("members"); });
@@ -97,17 +124,28 @@
       openFellowsFromPanel(event);
     }
   });
+  function openGdsView(event) {
+    event.preventDefault();
+    history.pushState(null, "", "#gds");
+    showView("gds");
+  }
+  $("gdsPanel").addEventListener("click", openGdsView);
+  $("gdsPanel").addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") openGdsView(event);
+  });
   $("homeLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
   $("dashboardLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
   $("fellowsDashboardLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
+  $("gdsDashboardLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
   memberSearch.addEventListener("input", renderMembers);
   memberCategory.addEventListener("change", renderMembers);
   fellowSearch.addEventListener("input", renderFellows);
   fellowStatus.addEventListener("change", renderFellows);
-  window.addEventListener("popstate", () => showView(window.location.hash === "#members" ? "members" : window.location.hash === "#fellows" ? "fellows" : "dashboard"));
-  showView(window.location.hash === "#members" ? "members" : window.location.hash === "#fellows" ? "fellows" : "dashboard");
+  window.addEventListener("popstate", () => showView(window.location.hash === "#members" ? "members" : window.location.hash === "#fellows" ? "fellows" : window.location.hash === "#gds" ? "gds" : "dashboard"));
+  showView(window.location.hash === "#members" ? "members" : window.location.hash === "#fellows" ? "fellows" : window.location.hash === "#gds" ? "gds" : "dashboard");
 
   let chart;
+  let detailChart;
   function drawChart() {
     if (!window.Chart) return;
     const css = getComputedStyle(root);

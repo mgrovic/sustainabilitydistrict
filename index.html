@@ -23,7 +23,7 @@
       <div class="stat"><span class="stat-label">DEI Business Fellows</span><span class="stat-value" id="statFellows">–</span></div>
     </section>
     <section class="grid-2">
-      <div class="panel"><h2>GDS-Index Overall Score</h2><div class="chart-box"><canvas id="gdsChart"></canvas></div></div>
+      <div class="panel panel-link" id="gdsPanel" role="link" tabindex="0" aria-label="Open Global Destination Sustainability Index"><h2>GDS-Index Overall Score</h2><div class="chart-box"><canvas id="gdsChart"></canvas></div></div>
       <div class="panel"><h2 id="targetsTitle">Growth Targets</h2><div id="targets" class="targets"></div></div>
     </section>
     <section class="grid-2">
@@ -46,6 +46,29 @@
       <details class="about" open><summary>About the DEI Business Fellows Program</summary><p>Our Diversity, Equity, and Inclusion (DEI) Fellows Program empowers underrepresented entrepreneurs and small business owners in the travel and tourism sector. Through this initiative, fellows receive:</p><ul><li>Complementary marketing support</li><li>Mentorship from industry leaders</li><li>Educational resources and workshops</li><li>Networking opportunities to expand their reach</li></ul><p>The program fosters a more inclusive and equitable industry, providing businesses the tools and support needed to thrive.</p></details>
       <div class="member-controls"><label class="search-field"><span class="sr-only">Search fellows</span><input id="fellowSearch" type="search" placeholder="Search fellows..." /></label><label class="select-field"><span class="sr-only">Filter fellows by category</span><select id="fellowStatus"><option value="all">All Categories</option><option value="current">Current Fellows</option><option value="alumni">Alumni</option></select></label></div>
       <div id="fellowGrid" class="member-grid"></div>
+    </section>
+    <section id="gdsView" class="gds-view" hidden>
+      <a class="back-link" id="gdsDashboardLink" href="#dashboard">← Dashboard</a>
+      <h1>Global Destination Sustainability Index</h1>
+      <p class="lead">Tracking our progress on sustainability metrics over time</p>
+      <section class="gds-intro">
+        <h2><span class="gds-icon">✦</span> Understanding Our GDS-Index Data</h2>
+        <p>The Global Destination Sustainability Index provides a comprehensive assessment of our destination's sustainability performance across multiple categories.</p>
+        <p>Our metrics are divided into four main categories: Supplier, Destination Management Performance, Social, and Environmental. Each category contributes to our overall score and helps identify areas for improvement.</p>
+        <div class="gds-categories">
+          <article class="gds-category environmental"><h3>Environmental</h3><p>Includes carbon footprint and renewable energy initiatives</p></article>
+          <article class="gds-category social"><h3>Social</h3><p>Covers diversity and community engagement</p></article>
+          <article class="gds-category supplier"><h3>Supplier</h3><p>Evaluates local suppliers and sustainable sourcing</p></article>
+          <article class="gds-category destination"><h3>Destination Management</h3><p>Strategies and policies that support local sustainability</p></article>
+        </div>
+      </section>
+      <div class="gds-stats">
+        <article><span>Overall Score (<span id="gdsCurrentYear"></span>)</span><strong id="gdsCurrentScore"></strong></article>
+        <article><span>Since <span id="gdsStartYear"></span></span><strong id="gdsChange"></strong></article>
+        <article><span>North America Rank</span><strong id="gdsRegionalRank"></strong></article>
+        <article><span>Top 40 Cutoff</span><strong id="gdsCutoff"></strong></article>
+      </div>
+      <section class="gds-trend panel"><h2>Score Trend</h2><div class="chart-box"><canvas id="gdsDetailChart"></canvas></div></section>
     </section>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>

@@ -49,6 +49,10 @@ h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 1.5rem; line-height: 1.1
 .lead { color: var(--muted); font-size: 1.1rem; margin: -1rem 0 2.5rem; }
 .members-view .about { border: 1px solid var(--accent); border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 2rem; }
 .members-view .about p, .members-view .about ul { color: var(--text); max-width: none; }
+.fellows-view .about { border-color: #a86fc5; background: #130d16; }
+.fellows-view .about summary { color: #ead7f4; }
+.fellows-view .about p, .fellows-view .about li { color: #ded5e2; }
+.fellows-view .about a { color: #c084fc; }
 .member-controls { display: grid; grid-template-columns: 1fr 270px; gap: 1rem; margin-bottom: 1.5rem; }
 .search-field input, .select-field select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font: inherit; padding: .85rem 1rem; }
 .member-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }

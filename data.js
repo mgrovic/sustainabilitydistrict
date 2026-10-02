@@ -56,7 +56,7 @@ window.DASHBOARD_DATA = {
   growthTargetsTitle: "Growth Targets",
   growthTargets: [
     { label: "GDS-Index score", current: 59.76, target: 90 },
-    { label: "District members", current: 78, target: 100 },
+    { label: "District members", current: 75, target: 100 },
     { label: "DEI fellows", current: 28, target: 28 }
   ],
   events: [
@@ -276,11 +276,6 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/merriweather-post-pavilion"
     },
     {
-      "name": "MGM National Harbor, The Casino",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/mgm-national-harbor-casino"
-    },
-    {
       "name": "National Children's Museum",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/national-childrens-museum"
@@ -331,11 +326,6 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/riggs-washington-dc"
     },
     {
-      "name": "Rocklands Barbeque and Grilling Company",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/rocklands-barbeque-grilling-co-wisconsin-ave"
-    },
-    {
       "name": "Root & Stem",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/root-stem"
@@ -364,11 +354,6 @@ window.DASHBOARD_DATA = {
       "name": "Tanger National Harbor",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/tanger-outlets-national-harbor"
-    },
-    {
-      "name": "The Anthem",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/anthem"
     },
     {
       "name": "The Catholic University of America Events & Conferences",

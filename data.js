@@ -56,7 +56,7 @@ window.DASHBOARD_DATA = {
   growthTargetsTitle: "Growth Targets",
   growthTargets: [
     { label: "GDS-Index score", current: 59.76, target: 90 },
-    { label: "District members", current: 72, target: 100 },
+    { label: "District members", current: 73, target: 100 },
     { label: "DEI fellows", current: 28, target: 28 }
   ],
   events: [
@@ -65,6 +65,11 @@ window.DASHBOARD_DATA = {
   ],
   members: [
   
+    {
+      "name": "11:Eleven Gallery",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/11eleven-gallery"
+    },
     {
       "name": "AC Hotel Washington DC Capitol Hill Navy Yard",
       "category": "Sustainability District member",
@@ -91,6 +96,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/ambar-shaw"
     },
     {
+      "name": "American Executive Transportation",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/american-executive-transportation"
+    },
+    {
       "name": "American University – University Conference and Guest Services",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/american-university-university-conference-and-guest-services"
@@ -99,11 +109,6 @@ window.DASHBOARD_DATA = {
       "name": "Arena Stage at the Mead Center for American Theater",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/arena-stage-mead-center-american-theater"
-    },
-    {
-      "name": "Black Broadway in Washington D.C.",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/black-broadway-washington-dc"
     },
     {
       "name": "Canopy Washington DC The Wharf",
@@ -119,6 +124,11 @@ window.DASHBOARD_DATA = {
       "name": "Capital Turnaround",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/capital-turnaround"
+    },
+    {
+      "name": "Chaia",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/chaia"
     },
     {
       "name": "Chopt Creative Salad Co.",
@@ -161,14 +171,9 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/eaton-washington-dc"
     },
     {
-      "name": "Fairmont Washington, DC, Georgetown",
+      "name": "Embassy Suites Washington, DC-Convention Center",
       "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/fairmont-washington-dc-georgetown"
-    },
-    {
-      "name": "Fish Shop",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/fish-shop"
+      "website": "https://washington.org/meetings/find-dc-listings/embassy-suites-washington-dc-convention-center"
     },
     {
       "name": "Fogo de Chão",
@@ -176,19 +181,19 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/fogo-de-chao"
     },
     {
-      "name": "Founding Farmers Fishers & Bakers",
+      "name": "Founding Farmers",
       "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/farmers-fishers-bakers"
+      "website": "https://washington.org/meetings/find-dc-listings/founding-farmers"
+    },
+    {
+      "name": "Founding Farmers & Distillers",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/farmers-distillers"
     },
     {
       "name": "Friends Meeting of Washington",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/friends-meeting-washington"
-    },
-    {
-      "name": "Grand Hyatt Washington",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/grand-hyatt-washington"
     },
     {
       "name": "Hilton Garden Inn Washington, DC—U.S. Capitol",
@@ -206,11 +211,6 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/hosts-dc-host-global-member"
     },
     {
-      "name": "Hotel Madera",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/hotel-madera"
-    },
-    {
       "name": "Hyatt House Washington, D.C./The Wharf",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/hyatt-house-washington-dcthe-wharf"
@@ -219,6 +219,16 @@ window.DASHBOARD_DATA = {
       "name": "Hyatt Regency Crystal City at Reagan National Airport",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/hyatt-regency-crystal-city-reagan-national-airport"
+    },
+    {
+      "name": "Hyatt Regency Washington On Capitol Hill",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/hyatt-regency-washington-capitol-hill"
+    },
+    {
+      "name": "Jo Malone London",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/jo-malone-london"
     },
     {
       "name": "JW Marriott Washington, DC",
@@ -236,9 +246,14 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/kimpton-hotel-monaco-washington-dc"
     },
     {
-      "name": "Linder Global Events",
+      "name": "Lost Generation Brewing Company",
       "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/linder"
+      "website": "https://washington.org/meetings/find-dc-listings/lost-generation-brewing-company"
+    },
+    {
+      "name": "Lyle Hotel",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/lyle-hotel"
     },
     {
       "name": "Marriott Marquis Washington, DC",
@@ -246,19 +261,19 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/marriott-marquis-washington-dc"
     },
     {
+      "name": "Merriweather Post Pavilion",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/merriweather-post-pavilion"
+    },
+    {
       "name": "MGM National Harbor",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/mgm-national-harbor"
     },
     {
-      "name": "MGM National Harbor, The Casino",
+      "name": "National Children's Museum",
       "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/mgm-national-harbor-casino"
-    },
-    {
-      "name": "National Geographic Museum of Exploration",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/national-geographic-museum"
+      "website": "https://washington.org/meetings/find-dc-listings/national-childrens-museum"
     },
     {
       "name": "National Press Club",
@@ -296,24 +311,14 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/rasa-mount-vernon"
     },
     {
-      "name": "Rocklands Barbeque and Grilling Company",
+      "name": "Riggs Washington DC",
       "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/rocklands-barbeque-grilling-co-wisconsin-ave"
-    },
-    {
-      "name": "Root & Stem",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/root-stem"
+      "website": "https://washington.org/meetings/find-dc-listings/riggs-washington-dc"
     },
     {
       "name": "Rosewood Washington, D.C.",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/rosewood-washington-dc"
-    },
-    {
-      "name": "Royal Sonesta Washington DC Dupont Circle",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/royal-sonesta-washington-dc-dupont-circle"
     },
     {
       "name": "Sofitel Washington DC Lafayette Square",
@@ -334,16 +339,6 @@ window.DASHBOARD_DATA = {
       "name": "Tanger National Harbor",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/tanger-outlets-national-harbor"
-    },
-    {
-      "name": "The Anthem",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/anthem"
-    },
-    {
-      "name": "The Catholic University of America Events & Conferences",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/catholic-university-america-conferences"
     },
     {
       "name": "The Darcy Hotel",
@@ -401,6 +396,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/tudor-place-historic-house-garden"
     },
     {
+      "name": "USA Guided Tours",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/usa-guided-tours"
+    },
+    {
       "name": "Walter E. Washington Convention Center",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/walter-e-washington-convention-center"
@@ -414,6 +414,11 @@ window.DASHBOARD_DATA = {
       "name": "Washington Marriott Capitol Hill",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/washington-marriott-capitol-hill"
+    },
+    {
+      "name": "Well Dunn Catering",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/well-dunn-catering"
     },
     {
       "name": "Willard InterContinental Washington, D.C.",

@@ -158,7 +158,18 @@
     history.pushState(null, "", `#${view}`);
     showView(view);
   }
+  function openPanelView(event, view) {
+    if (event.target.closest("a, button, input, select, textarea, summary")) return;
+    openView(event, view);
+  }
   $("gdsPanel").addEventListener("click", openGdsView);
+  $("membersPanel").addEventListener("click", (event) => openPanelView(event, "members"));
+  $("fellowsPanel").addEventListener("click", (event) => openPanelView(event, "fellows"));
+  [["membersPanel", "members"], ["fellowsPanel", "fellows"]].forEach(([id, view]) => {
+    $(id).addEventListener("keydown", (event) => {
+      if ((event.key === "Enter" || event.key === " ") && event.target === $(id)) openView(event, view);
+    });
+  });
   [["gdsStat", "gds"], ["membersStat", "members"], ["eventsStat", "events"], ["fellowsStat", "fellows"]].forEach(([id, view]) => $(id).addEventListener("click", (event) => openView(event, view)));
   $("homeLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });
   $("dashboardLink").addEventListener("click", (event) => { event.preventDefault(); history.pushState(null, "", "#dashboard"); showView("dashboard"); });

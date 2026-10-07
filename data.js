@@ -56,7 +56,7 @@ window.DASHBOARD_DATA = {
   growthTargetsTitle: "Growth Targets",
   growthTargets: [
     { label: "GDS-Index score", current: 59.76, target: 90 },
-    { label: "District members", current: 76, target: 100 },
+    { label: "District members", current: 77, target: 100 },
     { label: "DEI fellows", current: 28, target: 28 }
   ],
   events: [
@@ -156,11 +156,6 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/csi-washington-dc"
     },
     {
-      "name": "Conrad Washington, DC",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/conrad-washington-dc"
-    },
-    {
       "name": "Courtyard by Marriott Washington, DC—U.S. Capitol",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/courtyard-marriott-washington-dc-us-capitol"
@@ -181,9 +176,9 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/embassy-suites-washington-dc-convention-center"
     },
     {
-      "name": "Fairmont Washington, DC, Georgetown",
+      "name": "Fish Shop",
       "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/fairmont-washington-dc-georgetown"
+      "website": "https://washington.org/meetings/find-dc-listings/fish-shop"
     },
     {
       "name": "Fogo de Chão",
@@ -196,6 +191,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/founding-farmers"
     },
     {
+      "name": "Founding Farmers & Distillers",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/farmers-distillers"
+    },
+    {
       "name": "Founding Farmers Fishers & Bakers",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/farmers-fishers-bakers"
@@ -206,24 +206,24 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/friends-meeting-washington"
     },
     {
+      "name": "Grand Hyatt Washington",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/grand-hyatt-washington"
+    },
+    {
+      "name": "Hilton Garden Inn Washington, DC—U.S. Capitol",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/hilton-garden-inn-washington-dc-us-capitol"
+    },
+    {
       "name": "Hilton Washington DC National Mall The Wharf",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/hilton-washington-dc-national-mall"
     },
     {
-      "name": "Hosts DC, a Host Global Member",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/hosts-dc-host-global-member"
-    },
-    {
       "name": "Hotel Madera",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/hotel-madera"
-    },
-    {
-      "name": "Hyatt House Washington, D.C./The Wharf",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/hyatt-house-washington-dcthe-wharf"
     },
     {
       "name": "Hyatt Regency Crystal City at Reagan National Airport",
@@ -251,11 +251,6 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/kimpton-george-hotel"
     },
     {
-      "name": "Kimpton Hotel Monaco Washington DC",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/kimpton-hotel-monaco-washington-dc"
-    },
-    {
       "name": "Linder Global Events",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/linder"
@@ -271,6 +266,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/lyle-hotel"
     },
     {
+      "name": "Marriott Marquis Washington, DC",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/marriott-marquis-washington-dc"
+    },
+    {
       "name": "Merriweather Post Pavilion",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/merriweather-post-pavilion"
@@ -281,9 +281,9 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/mgm-national-harbor"
     },
     {
-      "name": "MGM National Harbor, The Casino",
+      "name": "National Children's Museum",
       "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/mgm-national-harbor-casino"
+      "website": "https://washington.org/meetings/find-dc-listings/national-childrens-museum"
     },
     {
       "name": "National Geographic Museum of Exploration",
@@ -294,6 +294,11 @@ window.DASHBOARD_DATA = {
       "name": "National Press Club",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/national-press-club"
+    },
+    {
+      "name": "Nationals Park",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/nationals-park"
     },
     {
       "name": "Old Town Trolley Tours",
@@ -311,14 +316,19 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/park-hyatt-washington-dc"
     },
     {
+      "name": "PRA–Washington, D.C.",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/pra-washington-dc"
+    },
+    {
       "name": "RASA Mount Vernon",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/rasa-mount-vernon"
     },
     {
-      "name": "Riggs Washington DC",
+      "name": "Rocklands Barbeque and Grilling Company",
       "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/riggs-washington-dc"
+      "website": "https://washington.org/meetings/find-dc-listings/rocklands-barbeque-grilling-co-wisconsin-ave"
     },
     {
       "name": "Root & Stem",
@@ -371,11 +381,6 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/darcy-hotel"
     },
     {
-      "name": "The Dupont Circle Hotel",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/dupont-circle-hotel"
-    },
-    {
       "name": "The Howard Theatre",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/howard-theatre"
@@ -426,6 +431,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/walter-e-washington-convention-center"
     },
     {
+      "name": "Washington Hilton",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/washington-hilton"
+    },
+    {
       "name": "Washington Marriott Capitol Hill",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/washington-marriott-capitol-hill"
@@ -434,11 +444,6 @@ window.DASHBOARD_DATA = {
       "name": "Well Dunn Catering",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/well-dunn-catering"
-    },
-    {
-      "name": "Willard InterContinental Washington, D.C.",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/willard-intercontinental-washington"
     },
     {
       "name": "Yours Truly DC, Vignette Collection",

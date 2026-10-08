@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DDC Sustainability District Dashboard</title>
+  <meta name="description" content="All of DDC's sustainability efforts, centralized." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar"><a class="brand" id="homeLink" href="#dashboard">DDC Dashboard</a><nav class="topnav" aria-label="Primary navigation"><a href="#members" id="districtLink">Sustainability District</a><button id="themeToggle" class="icon-btn" aria-label="Switch light/dark mode">☀︎</button></nav></header>
+    <main class="wrap">
+    <div id="dashboardView">
+    <h1>DC's Sustainability Efforts at a Glance</h1>
+    <details class="about"><summary>About the Sustainability Dashboard</summary><p id="aboutText"></p></details>
+    <section class="stats" aria-label="Key numbers">
+      <a class="stat stat-primary stat-link" id="gdsStat" href="#gds" aria-label="Open Global Destination Sustainability Index"><span class="stat-label">GDS-Index Score</span><span class="stat-value" id="statGds">–</span></a>
+      <a class="stat stat-link" id="membersStat" href="#members" aria-label="Open Sustainability District Members"><span class="stat-label">Sustainability District Members</span><span class="stat-value" id="statMembers">–</span></a>
+        <a class="stat stat-link" id="eventsStat" href="#events" aria-label="Open Net Zero Carbon Events"><span class="stat-label">Net Zero Carbon Events</span><span class="stat-value"><span id="statCarbon">–</span> <small>kgCO₂e</small></span></a>
+      <a class="stat stat-link" id="fellowsStat" href="#fellows" aria-label="Open DEI Business Fellows"><span class="stat-label">DEI Business Fellows</span><span class="stat-value" id="statFellows">–</span></a>
+    </section>
+    <section class="grid-2">
+      <a class="panel panel-link" id="gdsPanel" href="#gds" aria-label="Open Global Destination Sustainability Index"><h2>GDS-Index Overall Score</h2><div class="chart-box"><canvas id="gdsChart" role="img" aria-label="GDS-Index score chart"></canvas></div></a>
+      <div class="panel"><h2 id="targetsTitle">Growth Targets</h2><div id="targets" class="targets"></div></div>
+    </section>
+    <section class="grid-2">
+      <section class="panel panel-link" id="membersPanel" role="link" tabindex="0" aria-label="Open all Sustainability District Members" aria-labelledby="members-title"><div class="panel-head"><h2 id="members-title">Sustainability District Members</h2><a id="membersLink" class="view-all" href="#members">View all ↗</a></div><div class="filters" id="memberFilters" aria-label="Member filters"></div><div class="carousel"><button class="nav" type="button" data-dir="-1" data-target="members" aria-label="Previous member">‹</button><div class="slide" id="memberSlide" aria-live="polite"></div><button class="nav" type="button" data-dir="1" data-target="members" aria-label="Next member">›</button></div></section>
+      <section class="panel panel-link" id="fellowsPanel" role="link" tabindex="0" aria-label="Open all DEI Business Fellows" aria-labelledby="fellows-title"><div class="panel-head"><h2 id="fellows-title">DEI Business Fellows</h2><a id="fellowsLink" class="view-all" href="#fellows">View all ↗</a></div><div class="filters" id="fellowFilters" aria-label="Fellow filters"></div><div class="carousel"><button class="nav" type="button" data-dir="-1" data-target="fellows" aria-label="Previous fellow">‹</button><div class="slide" id="fellowSlide" aria-live="polite"></div><button class="nav" type="button" data-dir="1" data-target="fellows" aria-label="Next fellow">›</button></div></section>
+    </section>
+    </div>
+    <section id="eventsView" class="members-view events-view" aria-labelledby="events-view-title" hidden>
+      <a class="back-link" id="eventsDashboardLink" href="#dashboard">← Dashboard</a>
+      <h1 id="events-view-title" tabindex="-1">Net Zero Carbon Events</h1>
+      <p class="lead">Review the events currently tracked in the dashboard’s carbon data.</p>
+      <section class="panel" aria-labelledby="events-title"><h2 id="events-title">Tracked Events</h2><p id="eventsSummary" class="muted-text"></p><ul id="eventsList" class="events-list"></ul></section>
+    </section>
+    <section id="membersView" class="members-view" aria-labelledby="members-view-title" hidden>
+      <a class="back-link" id="dashboardLink" href="#dashboard">← Dashboard</a>
+      <h1 id="members-view-title" tabindex="-1">Sustainability District Members</h1>
+      <p class="lead">View all members participating in our sustainability district initiatives.</p>
+      <details class="about" open><summary>About the Sustainability District</summary><p>The Sustainability District is a collective of forward-thinking businesses and organizations in Washington, DC, united by a commitment to environmental responsibility and sustainable practices.</p><ul><li>Reduce their carbon footprint</li><li>Implement eco-friendly operations</li><li>Support community-driven environmental initiatives</li></ul></details>
+      <div class="member-controls"><label class="search-field"><span class="sr-only">Search members</span><input id="memberSearch" type="search" placeholder="Search..." /></label><label class="select-field"><span class="sr-only">Filter by category</span><select id="memberCategory"><option value="all">All Categories</option></select></label></div>
+      <p id="memberResults" class="sr-only" aria-live="polite"></p><div id="memberGrid" class="member-grid"></div>
+    </section>
+    <section id="fellowsView" class="members-view fellows-view" aria-labelledby="fellows-view-title" hidden>
+      <a class="back-link" id="fellowsDashboardLink" href="#dashboard">← Dashboard</a>
+      <h1 id="fellows-view-title" tabindex="-1">DEI Business Fellows</h1>
+      <p class="lead">View all fellows participating in our diversity, equity, and inclusion initiatives.</p>
+      <details class="about" open><summary>About the DEI Business Fellows Program</summary><p>Our Diversity, Equity, and Inclusion (DEI) Fellows Program empowers underrepresented entrepreneurs and small business owners in the travel and tourism sector. Through this initiative, fellows receive:</p><ul><li>Complementary marketing support</li><li>Mentorship from industry leaders</li><li>Educational resources and workshops</li><li>Networking opportunities to expand their reach</li></ul><p>The program fosters a more inclusive and equitable industry, providing businesses the tools and support needed to thrive.</p></details>
+      <div class="member-controls"><label class="search-field"><span class="sr-only">Search fellows</span><input id="fellowSearch" type="search" placeholder="Search fellows..." /></label><label class="select-field"><span class="sr-only">Filter fellows by cohort</span><select id="fellowStatus"><option value="all">All Cohorts</option><option value="2026">2026 Cohort</option></select></label></div>
+      <p id="fellowResults" class="sr-only" aria-live="polite"></p><div id="fellowGrid" class="member-grid"></div>
+    </section>
+    <section id="gdsView" class="gds-view" aria-labelledby="gds-view-title" hidden>
+      <a class="back-link" id="gdsDashboardLink" href="#dashboard">← Dashboard</a>
+      <h1 id="gds-view-title" tabindex="-1">Global Destination Sustainability Index</h1>
+      <p class="lead">Tracking our progress on sustainability metrics over time</p>
+      <section class="gds-intro">
+        <h2><span class="gds-icon">✦</span> Understanding Our GDS-Index Data</h2>
+        <p>The Global Destination Sustainability Index provides a comprehensive assessment of our destination's sustainability performance across multiple categories.</p>
+        <p>Our metrics are divided into four main categories: Supplier, Destination Management Performance, Social, and Environmental. Each category contributes to our overall score and helps identify areas for improvement.</p>
+        <div class="gds-categories">
+          <article class="gds-category environmental"><h3>Environmental</h3><p>Includes carbon footprint and renewable energy initiatives</p></article>
+          <article class="gds-category social"><h3>Social</h3><p>Covers diversity and community engagement</p></article>
+          <article class="gds-category supplier"><h3>Supplier</h3><p>Evaluates local suppliers and sustainable sourcing</p></article>
+          <article class="gds-category destination"><h3>Destination Management</h3><p>Strategies and policies that support local sustainability</p></article>
+        </div>
+      </section>
+      <div class="gds-stats">
+        <article><span>Overall Score (<span id="gdsCurrentYear"></span>)</span><strong id="gdsCurrentScore"></strong></article>
+        <article><span>Since <span id="gdsStartYear"></span></span><strong id="gdsChange"></strong></article>
+        <article><span>North America Rank</span><strong id="gdsRegionalRank"></strong></article>
+        <article><span>Top 40 Cutoff</span><strong id="gdsCutoff"></strong></article>
+      </div>
+      <section class="gds-trend panel" aria-labelledby="gds-trend-title"><h2 id="gds-trend-title">Score Trend</h2><div class="chart-box"><canvas id="gdsDetailChart" role="img" aria-label="GDS-Index score trend chart"></canvas></div><details class="data-table"><summary>View score data</summary><div id="gdsTable"></div></details></section>
+      <section class="progress-view">
+        <h2>Sustainability Progress</h2>
+        <div class="progress-list">
+          <details class="progress-item environmental"><summary>Environmental</summary><p>Includes carbon footprint reduction, renewable energy, waste, and climate action initiatives.</p><ul id="environmentalMetrics"></ul></details>
+          <details class="progress-item social"><summary>Social</summary><p>Covers diversity, equity, inclusion, accessibility, and community engagement.</p><ul id="socialMetrics"></ul></details>
+          <details class="progress-item supplier"><summary>Supplier</summary><p>Evaluates local suppliers, responsible procurement, and sustainable sourcing practices.</p><ul id="supplierMetrics"></ul></details>
+          <details class="progress-item destination"><summary>Destination Management</summary><p>Tracks strategies and policies that support local sustainability and long-term destination resilience.</p><ul id="destinationMetrics"></ul></details>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

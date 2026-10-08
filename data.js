@@ -56,7 +56,7 @@ window.DASHBOARD_DATA = {
   growthTargetsTitle: "Growth Targets",
   growthTargets: [
     { label: "GDS-Index score", current: 59.76, target: 90 },
-    { label: "District members", current: 76, target: 100 },
+    { label: "District members", current: 88, target: 100 },
     { label: "DEI fellows", current: 28, target: 28 }
   ],
   events: [
@@ -171,6 +171,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/dc-bird-alliance"
     },
     {
+      "name": "District Winery",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/district-winery"
+    },
+    {
       "name": "Eaton Washington DC",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/eaton-washington-dc"
@@ -186,6 +191,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/fairmont-washington-dc-georgetown"
     },
     {
+      "name": "Fish Shop",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/fish-shop"
+    },
+    {
       "name": "Fogo de Chão",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/fogo-de-chao"
@@ -196,6 +206,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/founding-farmers"
     },
     {
+      "name": "Founding Farmers & Distillers",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/farmers-distillers"
+    },
+    {
       "name": "Founding Farmers Fishers & Bakers",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/farmers-fishers-bakers"
@@ -204,6 +219,16 @@ window.DASHBOARD_DATA = {
       "name": "Friends Meeting of Washington",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/friends-meeting-washington"
+    },
+    {
+      "name": "Grand Hyatt Washington",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/grand-hyatt-washington"
+    },
+    {
+      "name": "Hilton Garden Inn Washington, DC—U.S. Capitol",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/hilton-garden-inn-washington-dc-us-capitol"
     },
     {
       "name": "Hilton Washington DC National Mall The Wharf",
@@ -271,6 +296,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/lyle-hotel"
     },
     {
+      "name": "Marriott Marquis Washington, DC",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/marriott-marquis-washington-dc"
+    },
+    {
       "name": "Merriweather Post Pavilion",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/merriweather-post-pavilion"
@@ -286,6 +316,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/mgm-national-harbor-casino"
     },
     {
+      "name": "National Children's Museum",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/national-childrens-museum"
+    },
+    {
       "name": "National Geographic Museum of Exploration",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/national-geographic-museum"
@@ -294,6 +329,11 @@ window.DASHBOARD_DATA = {
       "name": "National Press Club",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/national-press-club"
+    },
+    {
+      "name": "Nationals Park",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/nationals-park"
     },
     {
       "name": "Old Town Trolley Tours",
@@ -311,6 +351,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/park-hyatt-washington-dc"
     },
     {
+      "name": "PRA–Washington, D.C.",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/pra-washington-dc"
+    },
+    {
       "name": "RASA Mount Vernon",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/rasa-mount-vernon"
@@ -319,6 +364,11 @@ window.DASHBOARD_DATA = {
       "name": "Riggs Washington DC",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/riggs-washington-dc"
+    },
+    {
+      "name": "Rocklands Barbeque and Grilling Company",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/rocklands-barbeque-grilling-co-wisconsin-ave"
     },
     {
       "name": "Root & Stem",
@@ -421,9 +471,19 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/tudor-place-historic-house-garden"
     },
     {
+      "name": "USA Guided Tours",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/usa-guided-tours"
+    },
+    {
       "name": "Walter E. Washington Convention Center",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/walter-e-washington-convention-center"
+    },
+    {
+      "name": "Washington Hilton",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/washington-hilton"
     },
     {
       "name": "Washington Marriott Capitol Hill",

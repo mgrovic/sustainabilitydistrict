@@ -56,7 +56,7 @@ window.DASHBOARD_DATA = {
   growthTargetsTitle: "Growth Targets",
   growthTargets: [
     { label: "GDS-Index score", current: 59.76, target: 90 },
-    { label: "District members", current: 88, target: 100 },
+    { label: "District members", current: 87, target: 100 },
     { label: "DEI fellows", current: 28, target: 28 }
   ],
   events: [
@@ -159,11 +159,6 @@ window.DASHBOARD_DATA = {
       "name": "Conrad Washington, DC",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/conrad-washington-dc"
-    },
-    {
-      "name": "Courtyard by Marriott Washington, DC—U.S. Capitol",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/courtyard-marriott-washington-dc-us-capitol"
     },
     {
       "name": "DC Bird Alliance",

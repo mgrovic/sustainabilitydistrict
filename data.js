@@ -56,7 +56,7 @@ window.DASHBOARD_DATA = {
   growthTargetsTitle: "Growth Targets",
   growthTargets: [
     { label: "GDS-Index score", current: 59.76, target: 90 },
-    { label: "District members", current: 84, target: 100 },
+    { label: "District members", current: 86, target: 100 },
     { label: "DEI fellows", current: 28, target: 28 }
   ],
   events: [
@@ -146,11 +146,6 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/chopt-creative-salad-co"
     },
     {
-      "name": "City Cruises",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/hornblower-cruises-events"
-    },
-    {
       "name": "Cohera",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/csi-washington-dc"
@@ -169,6 +164,11 @@ window.DASHBOARD_DATA = {
       "name": "DC Bird Alliance",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/dc-bird-alliance"
+    },
+    {
+      "name": "District Winery",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/district-winery"
     },
     {
       "name": "Eaton Washington DC",
@@ -219,6 +219,11 @@ window.DASHBOARD_DATA = {
       "name": "Grand Hyatt Washington",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/grand-hyatt-washington"
+    },
+    {
+      "name": "Hilton Garden Inn Washington, DC—U.S. Capitol",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/hilton-garden-inn-washington-dc-us-capitol"
     },
     {
       "name": "Hilton Washington DC National Mall The Wharf",
@@ -316,6 +321,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/national-geographic-museum"
     },
     {
+      "name": "National Press Club",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/national-press-club"
+    },
+    {
       "name": "Nationals Park",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/nationals-park"
@@ -364,6 +374,11 @@ window.DASHBOARD_DATA = {
       "name": "Rosewood Washington, D.C.",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/rosewood-washington-dc"
+    },
+    {
+      "name": "Royal Sonesta Washington DC Dupont Circle",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/royal-sonesta-washington-dc-dupont-circle"
     },
     {
       "name": "Sofitel Washington DC Lafayette Square",
@@ -464,11 +479,6 @@ window.DASHBOARD_DATA = {
       "name": "Washington Hilton",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/washington-hilton"
-    },
-    {
-      "name": "Washington Marriott Capitol Hill",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/washington-marriott-capitol-hill"
     },
     {
       "name": "Well Dunn Catering",

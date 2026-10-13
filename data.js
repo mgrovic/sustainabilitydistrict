@@ -56,7 +56,7 @@ window.DASHBOARD_DATA = {
   growthTargetsTitle: "Growth Targets",
   growthTargets: [
     { label: "GDS-Index score", current: 59.76, target: 90 },
-    { label: "District members", current: 85, target: 100 },
+    { label: "District members", current: 88, target: 100 },
     { label: "DEI fellows", current: 28, target: 28 }
   ],
   events: [
@@ -356,6 +356,11 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/pra-washington-dc"
     },
     {
+      "name": "RASA Mount Vernon",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/rasa-mount-vernon"
+    },
+    {
       "name": "Riggs Washington DC",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/riggs-washington-dc"
@@ -414,6 +419,11 @@ window.DASHBOARD_DATA = {
       "name": "The Darcy Hotel",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/darcy-hotel"
+    },
+    {
+      "name": "The Dupont Circle Hotel",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/dupont-circle-hotel"
     },
     {
       "name": "The Howard Theatre",
@@ -484,6 +494,11 @@ window.DASHBOARD_DATA = {
       "name": "Well Dunn Catering",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/well-dunn-catering"
+    },
+    {
+      "name": "Willard InterContinental Washington, D.C.",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/willard-intercontinental-washington"
     },
     {
       "name": "Yours Truly DC, Vignette Collection",

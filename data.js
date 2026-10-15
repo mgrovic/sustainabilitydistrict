@@ -56,7 +56,7 @@ window.DASHBOARD_DATA = {
   growthTargetsTitle: "Growth Targets",
   growthTargets: [
     { label: "GDS-Index score", current: 59.76, target: 90 },
-    { label: "District members", current: 87, target: 100 },
+    { label: "District members", current: 88, target: 100 },
     { label: "DEI fellows", current: 28, target: 28 }
   ],
   events: [
@@ -344,6 +344,11 @@ window.DASHBOARD_DATA = {
       "name": "Omni Shoreham Hotel",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/omni-shoreham-hotel"
+    },
+    {
+      "name": "Park Hyatt Washington, DC",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/park-hyatt-washington-dc"
     },
     {
       "name": "PRA–Washington, D.C.",

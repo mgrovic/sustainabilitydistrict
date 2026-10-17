@@ -56,7 +56,7 @@ window.DASHBOARD_DATA = {
   growthTargetsTitle: "Growth Targets",
   growthTargets: [
     { label: "GDS-Index score", current: 59.76, target: 90 },
-    { label: "District members", current: 88, target: 100 },
+    { label: "District members", current: 90, target: 100 },
     { label: "DEI fellows", current: 28, target: 28 }
   ],
   events: [
@@ -239,6 +239,11 @@ window.DASHBOARD_DATA = {
       "name": "Hosts DC, a Host Global Member",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/hosts-dc-host-global-member"
+    },
+    {
+      "name": "Hotel Hive",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/hotel-hive"
     },
     {
       "name": "Hotel Madera",
@@ -434,6 +439,11 @@ window.DASHBOARD_DATA = {
       "name": "The Morrow Hotel Washington, DC Curio Collection by Hilton",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/morrow-hotel-washington-dc-curio-collection-hilton"
+    },
+    {
+      "name": "The Normandy Hotel",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/normandy-hotel"
     },
     {
       "name": "The Ritz-Carlton, Pentagon City",

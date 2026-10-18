@@ -56,7 +56,7 @@ window.DASHBOARD_DATA = {
   growthTargetsTitle: "Growth Targets",
   growthTargets: [
     { label: "GDS-Index score", current: 59.76, target: 90 },
-    { label: "District members", current: 90, target: 100 },
+    { label: "District members", current: 83, target: 100 },
     { label: "DEI fellows", current: 28, target: 28 }
   ],
   events: [
@@ -86,11 +86,6 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/agu-conference-center"
     },
     {
-      "name": "Ama",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/ama"
-    },
-    {
       "name": "Ambar Capitol Hill",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/ambar-capitol-hill"
@@ -109,11 +104,6 @@ window.DASHBOARD_DATA = {
       "name": "American University – University Conference and Guest Services",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/american-university-university-conference-and-guest-services"
-    },
-    {
-      "name": "Arena Stage at the Mead Center for American Theater",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/arena-stage-mead-center-american-theater"
     },
     {
       "name": "Black Broadway in Washington D.C.",
@@ -286,29 +276,9 @@ window.DASHBOARD_DATA = {
       "website": "https://washington.org/meetings/find-dc-listings/kimpton-hotel-monaco-washington-dc"
     },
     {
-      "name": "Linder Global Events",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/linder"
-    },
-    {
-      "name": "Lost Generation Brewing Company",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/lost-generation-brewing-company"
-    },
-    {
       "name": "Lyle Hotel",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/lyle-hotel"
-    },
-    {
-      "name": "Marriott Marquis Washington, DC",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/marriott-marquis-washington-dc"
-    },
-    {
-      "name": "Merriweather Post Pavilion",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/merriweather-post-pavilion"
     },
     {
       "name": "MGM National Harbor",
@@ -369,11 +339,6 @@ window.DASHBOARD_DATA = {
       "name": "Riggs Washington DC",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/riggs-washington-dc"
-    },
-    {
-      "name": "Rocklands Barbeque and Grilling Company",
-      "category": "Sustainability District member",
-      "website": "https://washington.org/meetings/find-dc-listings/rocklands-barbeque-grilling-co-wisconsin-ave"
     },
     {
       "name": "Root & Stem",

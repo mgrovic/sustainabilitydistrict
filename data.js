@@ -56,7 +56,7 @@ window.DASHBOARD_DATA = {
   growthTargetsTitle: "Growth Targets",
   growthTargets: [
     { label: "GDS-Index score", current: 59.76, target: 90 },
-    { label: "District members", current: 90, target: 100 },
+    { label: "District members", current: 91, target: 100 },
     { label: "DEI fellows", current: 28, target: 28 }
   ],
   events: [
@@ -454,6 +454,11 @@ window.DASHBOARD_DATA = {
       "name": "The Ritz-Carlton, Washington, DC",
       "category": "Sustainability District member",
       "website": "https://washington.org/meetings/find-dc-listings/ritz-carlton-washington-dc"
+    },
+    {
+      "name": "The River Inn",
+      "category": "Sustainability District member",
+      "website": "https://washington.org/meetings/find-dc-listings/river-inn-modus-hotels"
     },
     {
       "name": "The Royal Sonesta Washington DC Capitol Hill",
